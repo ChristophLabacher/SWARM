@@ -64,17 +64,11 @@ body 	{
 			background-image: url('../imgs/screens/bg.png');
 			opacity: 0;
 			transition: opacity 1s ease-in;
-   			 -ms-transition: opacity 1s ease-in;
-    		-moz-transition: opacity 1s ease-in;
-    		-webkit-transition: opacity 1s ease-in;
 		}
 
 		#pauseScreen.active	{
 			opacity: 1;
 			transition: opacity 3s ease-in;
-   			 -ms-transition: opacity 3s ease-in;
-    		-moz-transition: opacity 3s ease-in;
-    		-webkit-transition: opacity 3s ease-in;
 		}
 
 		#endScreen	{
@@ -83,17 +77,11 @@ body 	{
 			background-image: url('../imgs/screens/bg.png');
 			opacity: 0;
 			transition: opacity 3s ease-in;
-   			 -ms-transition: opacity 3s ease-in;
-    		-moz-transition: opacity 3s ease-in;
-    		-webkit-transition: opacity 3s ease-in;
 		}
 
 		#endScreen.active	{
 			opacity: 1;
 			transition: opacity 3s ease-in;
-   			 -ms-transition: opacity 3s ease-in;
-    		-moz-transition: opacity 3s ease-in;
-    		-webkit-transition: opacity 3s ease-in;
 		}
 
 		#blackoutScreen	{
@@ -102,17 +90,12 @@ body 	{
 			background-image: url('../imgs/screens/bg_black.png');
 
 			transition: opacity 1s ease-in;
-   			 -ms-transition: opacity 1s ease-in;
-    		-moz-transition: opacity 1s ease-in;
-    		-webkit-transition: opacity 1s ease-in;
 		}
 
 		#blackoutScreen.active	{
 			opacity: 1;
 			transition: opacity 1s ease-in;
-   			 -ms-transition: opacity 1s ease-in;
-    		-moz-transition: opacity 1s ease-in;
-    		-webkit-transition: opacity 1s ease-in;
+
 		}		
 	}
 

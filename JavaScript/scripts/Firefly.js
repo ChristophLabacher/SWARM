@@ -39,7 +39,7 @@ Firefly.prototype.update = function ()	{
 		this.velocity = new Vector(random(-1,1), random(-1,1));
 	}
 
-	// If the firefly is too far away from its center make it rerturn there
+	// If the firefly is too far away from its center make it return there
 	this.distance = 0;
 	this.distance = dist(this.position.x, this.position.y, this.center.x, this.center.y);
 	if (this.distance > 100)	{

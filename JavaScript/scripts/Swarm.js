@@ -23,6 +23,7 @@ function Swarm(c_)	{
 Swarm.prototype.update = function ()	{
 
 	if(swarmtick)	{
+		
 		// Gets the position of the frontmost firefly
 		frontmostX = 0;
 		for (var i = 0; i < this.fireflies.length; i++) {

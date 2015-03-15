@@ -21,7 +21,7 @@ function setup()	{
 	// Create new focus display
 	focusDisplay = new FocusDisplay();
 
-	// Create new focus display
+	// Create new medals
 	medals = []
 	medals[0] = new Medal(1);
 	medals[1] = new Medal(2);
@@ -44,7 +44,6 @@ function setup()	{
 	soundspots[3] = new SoundSpot(4, new Vector(9030, 320));
 	soundspots[4] = new SoundSpot(5, new Vector(10150, 625));
 	soundspots[5] = new SoundSpot(6, new Vector(12320, 155));
-
 
 	pauseIcons = new PauseIcons();
 

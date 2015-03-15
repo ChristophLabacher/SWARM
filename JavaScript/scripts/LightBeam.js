@@ -19,4 +19,9 @@ function LightBeam(i_, p_)	{
 // Draw lightbeam
 LightBeam.prototype.draw = function ()	{
 	ctx.drawImage(this.lightbeam, this.position.x, this.position.y);
+	
+	
+	for (var j = 0; j < this.dust.length; j++)	{
+		this.dust[j].draw();
+	}
 }

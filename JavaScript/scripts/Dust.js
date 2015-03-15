@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////
-////	FIREFLY
+////	DUST	
 ////////////////////////////////////////////////////////////////////
 
 function Dust(i_, x_, y_)	{
@@ -19,9 +19,9 @@ function Dust(i_, x_, y_)	{
 	this.updateCount = 0;
 }
 
-// Update the position of the firefly
+// Update the position of the dust
 Dust.prototype.update = function ()	{
-	// Change the direction of the firefly all 50 frames
+	// Change the direction of the dust all 50 frames
 	if (this.updateCount%50 == 0)	{
 		this.velocity = new Vector(random(-1,1), random(-1,1));
 	}
@@ -33,12 +33,12 @@ Dust.prototype.update = function ()	{
 		this.velocity =  new Vector(x * 0.0025, y * 0.0025);
 	}
 
-	// Move the firefly
+	// Move the dust
 	this.position.add(this.velocity);
 	this.updateCount++;
 }
 
-// Draw the firefly
+// Draw the dust
 Dust.prototype.draw = function ()	{
 	ctx.fillStyle = 'rgba(255,255,255,0.25)';
 	ctx.beginPath();

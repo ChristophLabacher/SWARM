@@ -83,7 +83,7 @@ function update()	{
 	// Update target
 	target.update();
 
-	// Move the paralaxes => every imagelayer & the soundspots
+	// Move the paralaxes => every imagelayer & the soundspots & lightBeams
 	paralax.update();
 
 	// Update focus display
@@ -104,10 +104,6 @@ function draw()	{
 	// Draw lightbeams
 	for (var i = 0; i < lightbeams.length; i++)	{
 		lightbeams[i].draw();
-
-		for (var j = 0; j < lightbeams[i].dust.length; j++)	{
-			lightbeams[i].dust[j].draw();
-		}
 	}
 
 	// Draw soundspots
@@ -140,7 +136,7 @@ function draw()	{
 function queue()	{
 	// Limit framerate to about 35 fps
 	setTimeout(function()	{
-	window.requestAnimationFrame(loop);
+		window.requestAnimationFrame(loop);
 	}, 1000/40);
 }
 
