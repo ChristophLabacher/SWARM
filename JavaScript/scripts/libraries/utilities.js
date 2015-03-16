@@ -123,5 +123,5 @@ function deleteClasses(id)	{
 }
 
 function setClass(id, klasse)	{
-	document.getElementById(id).className = ' ' + klasse;
+	document.getElementById(id).className = klasse;
 }

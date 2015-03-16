@@ -10,11 +10,11 @@ There are two versions available: Processing and HTML5/JavaScript.
 
 ## Gameplay
 
-A swarm of fireflies is flying through a cave. The user can alter its altitude by moving his right hand up or down. He has to, since the fireflies can get caught on the cave’s walls. Sometimes one has to navigate through narrow spaces – clenching a fist with your right hand focuses the swarm and makes it easier controllable for a short time. After the a couple of seconds of being focused the fireflies are being spread apart.
+A swarm of fireflies is flying through a cave. The user can alter its altitude by moving his right hand up or down. He has to, since the fireflies can get caught on the cave’s walls. Sometimes one has to navigate through narrow spaces – clenching a fist with your right hand focuses the swarm and makes it easier controllable for a short time. After a couple of seconds of being focused the fireflies are being spread apart.
 
 ![Gameplay](/Readme/gameplay_1.png)
 
-Within the level there are six “Soundspots”. In order to activate it the user has to make a couple of fireflies pass through. Once activated, a layer of sound is starting to play. The aim is to complete the playing piece of music, by activating as many “Soundspots” as possible.
+Within the level there are six “Soundspots”. In order to activate one the user has to make a couple of fireflies pass through. Once activated, a layer of sound is starting to play. The aim is to complete the playing piece of music, by activating as many “Soundspots” as possible.
 
 ![Gameplay](/Readme/gameplay_2.png)
 
@@ -48,6 +48,7 @@ The JavaScript version was created after the Processing version was finished to 
 	- Load points in array
 	- Shift array depending on game position
 	- Get points with x close to Firefly and get dist (Current position and position in the next frame)
+	- Make Firefly bounce of (and kill it eventually)
 	- Cleanup SVGs and load them externally (not directily from index.html)
 - Game mechanism
 	- Implement start screen, pause screen and reload after finish
@@ -58,6 +59,8 @@ The JavaScript version was created after the Processing version was finished to 
 - Cleanup
 	- Check seamless looping of images
 	- Check comments
+	- Replace DOM management with jQuery pendant (addClass etc.)
+	- Review FullScreen code
 - Leap motion
 	- Import library
 	- Implement hand-tracking (and pause screen)

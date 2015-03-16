@@ -41,7 +41,6 @@ SoundSpot.prototype.update = function ()	{
 
 		this.sound.volume = 0.8;
 		score += 1;
-		console.log(score);
 	}
 
 	// If the current radius is smaller than the supposed one it grows
@@ -75,7 +74,7 @@ SoundSpot.prototype.update = function ()	{
 	}	
 
 	// Make the soundspot jiggle;
-	this.position.y +=Math.sin(this.updatecount);
+	this.position.y += Math.sin(this.updatecount);
 	this.updatecount += 0.05;
 }
 

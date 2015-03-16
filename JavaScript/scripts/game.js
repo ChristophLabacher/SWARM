@@ -85,6 +85,7 @@ function update()	{
 
 	// Move the paralaxes => every imagelayer & the soundspots & lightBeams
 	paralax.update();
+	movePoints();
 
 	// Update focus display
 	focusDisplay.update();
@@ -137,9 +138,12 @@ function queue()	{
 	// Limit framerate to about 35 fps
 	setTimeout(function()	{
 		window.requestAnimationFrame(loop);
-	}, 1000/40);
+	}, 1000/80);
 }
 
+
 // Initiate the setup and run the loop
-setup();
-loop();
+window.onload = function() {
+	setup();
+	loop();
+}
