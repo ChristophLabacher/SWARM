@@ -40,33 +40,34 @@ To make the game run in Processing at an acceptable framerate we used Multi-Thre
 
 ### JavaScript
 
-The JavaScript version was created after the Processing version was finished to tackle a lack of performance. The game was completely rewritten and partly restructured. The collision is this time using [Paper.js](http://paperjs.org) as a base library. ** This version is still in development and does not support Leap Motion tracking yet! **
+The JavaScript version was created after the Processing version was finished to tackle a lack of performance. The game was completely rewritten and partly restructured. The collision is this time using [Paper.js](http://paperjs.org) as a base library. **This version is still in development and does not support Leap Motion tracking yet!**
 
 ## To-Do
 
-- Collision detection
-	- Load points in array
-	- Shift array depending on game position
-	- Get points with x close to Firefly and get dist (Current position and position in the next frame)
-	- Make Firefly bounce of (and kill it eventually)
-	- Cleanup SVGs and load them externally (not directily from index.html)
-- Game mechanism
-	- Implement start screen, pause screen and reload after finish
-- Performance optimisation
-	- Compress images
-	- Compress sounds
-	- Implement loading algorythm (and screen)
-- Cleanup
-	- Check seamless looping of images
-	- Check comments
-	- Replace DOM management with jQuery pendant (addClass etc.)
-	- Review FullScreen code
-- Leap motion
-	- Import library
-	- Implement hand-tracking (and pause screen)
-	- Implement fist-gesture
-	- Make the swam follow & start screen understand gestures (replace mouse-events in setup.js)
-	- Check for Leap Motion and switch to mouse
+- [ ] Collision detection
+	- [x] Load points in array
+	- [x] Shift array depending on game position
+	- [ ] Get points with x close to Firefly and get dist (Current position and position in the next frame)
+	- [ ] Make Firefly bounce of (and kill it eventually)
+	- [x] Cleanup SVGs and load them externally (not directly from index.html)
+- [ ] Game mechanism
+	- [ ] Implement start screen, pause screen and reload after finish
+- [ ] Performance optimisation
+	- [ ] Compress images
+	- [ ] Compress sounds
+	- [ ] Implement loading algorythm (and screen)
+	- [ ] Make sounds play synchronized 
+- [ ] Cleanup
+	- [ ] Check seamless looping of images
+	- [ ] Check comments
+	- [ ] Replace DOM management with jQuery pendant (addClass etc.)
+	- [ ] Review FullScreen code
+- [ ] Leap motion
+	- [ ] Import library
+	- [ ] Implement hand-tracking (and pause screen)
+	- [ ] Implement fist-gesture
+	- [ ] Make the swam follow & start screen understand gestures (replace mouse-events in setup.js)
+	- [ ] Check for Leap Motion and switch to mouse
 	
 ## Ideas
 
