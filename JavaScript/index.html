@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Swarm</title>
+
+		<link rel="stylesheet" type="text/css" href="styles/reset.css">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<div id="swarm">
+				
+				<div id="game">
+					<canvas id="gameCanvas"></canvas> 
+				</div>
+	
+				<div id="screens">
+					<div id="toutorialScreen" class=""></div>
+					<div id="startScreen" class=""></div>
+	
+					<div id="pauseScreen" class="">
+						<canvas id="pauseCanvas"></canvas> 
+					</div>
+	
+					<div id="endScreen" class="">
+						<canvas id="endCanvas"></canvas> 
+					</div>
+	
+					<div id="splashScreen" class=""></div>
+					<div id="blackoutScreen" class=""></div>
+				</div>
+	
+				<div id="overlays">
+					<canvas id="overlayCanvas" class=""></canvas>
+					<canvas id="svgCanvas" class=""></canvas>
+				</div>
+	
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="scripts/libraries/paper-full-0.9.22.min.js"></script>
+		<script type="text/javascript" src="scripts/libraries/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="scripts/libraries/utilities.js"></script>
+
+		<script type="text/javascript" src="scripts/getPoints.js"></script>
+		
+		<script type="text/javascript" src="scripts/Objects/Firefly.js"></script>
+		<script type="text/javascript" src="scripts/Objects/Target.js"></script>
+		<script type="text/javascript" src="scripts/Objects/Swarm.js"></script>
+		<script type="text/javascript" src="scripts/Objects/SoundSpot.js"></script>
+		<script type="text/javascript" src="scripts/Objects/Medal.js"></script>
+		<script type="text/javascript" src="scripts/Objects/Dust.js"></script>
+		<script type="text/javascript" src="scripts/Objects/LightBeam.js"></script>
+		<script type="text/javascript" src="scripts/Objects/Paralax.js"></script>
+		<script type="text/javascript" src="scripts/Objects/FocusDisplay.js"></script>
+		<script type="text/javascript" src="scripts/Objects/SoundEffects.js"></script>
+		<script type="text/javascript" src="scripts/Objects/Vignette.js"></script>
+		<script type="text/javascript" src="scripts/Objects/PauseIcons.js"></script>
+
+		<script type="text/javascript" src="scripts/endScreen.js"></script>
+		<script type="text/javascript" src="scripts/pauseScreen.js"></script>
+		<script type="text/javascript" src="scripts/setup.js"></script>
+		<script type="text/javascript" src="scripts/game.js"></script>
+		<script type="text/javascript" src="scripts/reset.js"></script>
+				
+	</body>
+
+</html>
