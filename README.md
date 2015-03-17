@@ -44,19 +44,21 @@ The JavaScript version was created after the Processing version was finished to 
 
 ## To-Do
 
-- [ ] Collision detection
+- [x] Collision detection
 	- [x] Load points in array
 	- [x] Shift array depending on game position
-	- [ ] Get points with x close to Firefly and get dist (Current position and position in the next frame)
-	- [ ] Make Firefly bounce of (and kill it eventually)
+	- [x] Get points with x close to Firefly and get dist (Current position and position in the next frame)
+	- [x] Make Firefly bounce of (and kill it eventually)
 	- [x] Cleanup SVGs and load them externally (not directly from index.html)
 - [ ] Game mechanism
 	- [ ] Implement start screen, pause screen and reload after finish
+	- [ ] Restart when no Fireflies are left
 - [ ] Performance optimisation
 	- [ ] Compress images
 	- [ ] Compress sounds
 	- [ ] Implement loading algorythm (and screen)
 	- [ ] Make sounds play synchronized 
+	- [ ] Optimize collision
 - [ ] Cleanup
 	- [ ] Check seamless looping of images
 	- [ ] Check comments

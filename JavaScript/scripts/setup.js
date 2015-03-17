@@ -7,7 +7,7 @@ function setup()	{
 	getPoints();
 
 	// Create a new swarm
-	swarm = new Swarm(100);
+	swarm = new Swarm(80);
 
 	// Create new paralax effect
 	paralax = new Paralax();

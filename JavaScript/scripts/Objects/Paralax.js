@@ -44,14 +44,14 @@ Paralax.prototype.update = function()	{
 		if (this.backgroundpositionX <= -4866)	{
 			this.backgroundpositionX = 0;
 		}
-		this.backgroundpositionY = map(mouseY, 0, canvas.height, 10, -10);
+		this.backgroundpositionY = map(mouseY, 0, canvas.height, 5, -5);
 
 		// Move background2
 		this.background2positionX -= this.background2change;
 		if (this.background2positionX <= -2540)	{
 			this.background2positionX = 0;
 		}
-		this.background2positionY = map(mouseY, 0, canvas.height, 5, -5);
+		this.background2positionY = map(mouseY, 0, canvas.height, 2, -2);
 
 		// Move lightbeams
 		for(var i = 0; i < lightbeams.length; i++)	{

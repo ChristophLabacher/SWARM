@@ -54,9 +54,16 @@ Firefly.prototype.update = function ()	{
 	// The firefly follows either the mouse or the one in front of it
 	this.follow();
 
+	this.collide();
+
 	// Move the firefly
 	this.position.add(this.velocity);
+	
 	this.updateCount++;
+	
+	if (this.position.x < 0)	{
+		this.isalive = false;
+	}
 }
 
 // Let the firefly follow the mouse/the one in front of it
@@ -167,6 +174,48 @@ Firefly.prototype.draw = function ()	{
 	}
 	
 	flickerReset();
+	
+
+}
+
+// Collide the firefly
+Firefly.prototype.collide = function()	{
+
+	// For all top points
+	for (var i = 0; i < top_Points_selected.length; i += 1) {
+		var point = top_Points_selected[i];
+
+		// If the point is close to the Firefly get their distance
+		if (point.x - gameposition - this.position.x < 30 && point.x - gameposition - this.position.x > -30)	{
+			var distance = dist(this.position.x, this.position.y, point.x - gameposition, point.y);
+		
+			// If the distance is to small reverse the fireflies direction.
+			if (distance <= 25)	{
+				this.position.x += this.velocity.x * 2;
+				
+				this.velocity.x = -2;
+				this.velocity.y = 2;
+			}
+		}
+	}
+	
+	// For all bottom points
+	for (var i = 0; i < bottom_Points_selected.length; i += 1) {
+		var point = bottom_Points_selected[i];
+
+		// If the point is close to the Firefly get their distance
+		if (point.x - gameposition - this.position.x < 30 && point.x - gameposition - this.position.x > -30)	{
+			var distance = dist(this.position.x, this.position.y, point.x - gameposition, point.y);
+		
+			// If the distance is to small reverse the fireflies direction.
+			if (distance <= 25)	{
+				this.position.x += this.velocity.x * 2;
+				
+				this.velocity.x = -2;
+				this.velocity.y = -2;
+			}
+		}
+	}
 	
 }
 

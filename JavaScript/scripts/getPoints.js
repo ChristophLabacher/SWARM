@@ -65,43 +65,31 @@ function getPoints () {
 		var point = bottom_top2.children[0].getPointAt(i);
 		bottom_Points.push(point)
 	}
+	
+	top_Points_selected = [];
+	bottom_Points_selected = [];
 }
 
 function movePoints()	{
-	project.clear();
-
-
-	for (var i = 0; i < top_Points.length; i += 40) {
-		var point = jQuery.extend({}, top_Points[i]);
-		
-		point.x -= gameposition;
-		
-		if (point.x < 800 && point.x > 100 && point.y > 1)	{
-		// Create a small circle shaped path at the point:
-		var circle = new Path.Circle({
-		    center: point,
-		    radius: 2,
-		    fillColor: 'red'
-		});	
+	var step = 20;
+	
+	top_Points_selected = [];
+	
+	for (var i = 0; i < top_Points.length; i += step) {
+		var point = top_Points[i];
+				
+		if (point.x - gameposition < 800 && point.y > 1)	{
+			top_Points_selected.push(point);
 		}
 	}
 	
-
-	for (var i = 0; i < bottom_Points.length; i += 40) {
-		var point = jQuery.extend({}, bottom_Points[i]);
-		
-		point.x -= gameposition;
-		
-		if (point.x < 800 && point.x > 100 && point.y < canvas.height - 1)	{
-		// Create a small circle shaped path at the point:
-		var circle = new Path.Circle({
-		    center: point,
-		    radius: 2,
-		    fillColor: 'white'
-		});	
+	bottom_Points_selected = [];
+	
+	for (var i = 0; i < bottom_Points.length; i += step) {
+		var point = bottom_Points[i];
+				
+		if (point.x - gameposition < 800 && point.y < canvas.height - 1)	{
+			bottom_Points_selected.push(point);
 		}
 	}
-
-	
-	paper.view.draw();
 }
