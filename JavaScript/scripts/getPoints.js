@@ -7,21 +7,7 @@ function getPoints () {
 	top_Points = []
 	bottom_Points = []
 			
-	function loadSVG(file){
-		var svg = null;
-		$.ajax({
-			type: "GET",
-			async: false,
-			url: file,
-			dataType: "xml",
-			success: function(xml){
-				svg = project.importSVG(xml.getElementsByTagName("svg")[0]);
-			}
-		});
-		return svg;	
-	}
-		
-	shape = loadSVG('imgs/level/level.svg');
+	shape = project.importSVG(levelSVG);
 	//shape = project.importSVG(document.getElementById('svg'));
 	shape.visible = false;
 

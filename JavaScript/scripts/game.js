@@ -70,6 +70,10 @@ function queue()	{
 
 // Initiate the setup and run the loop
 window.onload = function() {
+	loadFiles();
+}
+
+function filesLoaded()	{
 	setup();
-	loop();
+	loop();	
 }

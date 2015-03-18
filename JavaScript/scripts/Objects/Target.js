@@ -8,8 +8,7 @@ function Target()	{
 	this.fadeout = false;
 
 	// Load static vignette
-	this.target = new Image();
-	this.target.src = 'imgs/sprites/target.png';
+	this.target = sprites[7];
 }
 
 // Update the target

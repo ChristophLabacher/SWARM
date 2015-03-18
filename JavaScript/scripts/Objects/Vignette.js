@@ -10,12 +10,10 @@ function Vignette()	{
 	overlayCanvas.height = 800;
 	
 	// Load static vignette
-	this.vignettestatic = new Image();
-	this.vignettestatic.src = 'imgs/sprites/vignette_static.png';
+	this.vignettestatic = sprites[9];
 
 	// Load dynamic vignette
-	this.vignettedynamic = new Image();
-	this.vignettedynamic.src = 'imgs/sprites/vignette_dynamic.png';
+	this.vignettedynamic = sprites[8];
 }
 
 // Draw static vignette

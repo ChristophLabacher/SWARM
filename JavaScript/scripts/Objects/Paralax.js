@@ -7,15 +7,13 @@ function Paralax()	{
 	this.backgroundpositionX = -1000;
 	this.backgroundpositionY = 0;
 	this.backgroundchange = 2;
-	this.background = new Image();
-	this.background.src = 'imgs/level/background_neat_light.jpg';
+	this.background = level[0];
 	
 	// Load background2
 	this.background2positionX = 0;
 	this.background2positionY = 0;
 	this.background2change = 2;
-	this.background2 = new Image();
-	this.background2.src = 'imgs/level/background2_neat.png';
+	this.background2 = level[1];
 
 	// Lightbeams
 	this.lightbeamchange = 4;
@@ -23,8 +21,7 @@ function Paralax()	{
 	// Load foreground
 	this.foregroundpositionX = 0;
 	this.foregroundchange = 4;
-	this.foreground = new Image();
-	this.foreground.src = 'imgs/level/foreground.png';
+	this.foreground = level[3];
 
 	// Soundspots
 	this.soundspotchange = 4;
@@ -32,8 +29,7 @@ function Paralax()	{
 	// Load blur
 	this.blurpositionX = 0;
 	this.blurchange = 8;
-	this.blur = new Image();
-	this.blur.src = 'imgs/level/blur.png';
+	this.blur = level[2];
 }
 
 // Move all layers

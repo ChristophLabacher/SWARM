@@ -1,6 +1,6 @@
 # SWARM
 
-SWARM is a motion-controlled mini-game. It was created by [Nikolas Klein](http://nikolasklein.de), Miguel Pawlowski, [Florian Ludwig](http://www.florian-ludwig.de) and [Christoph Labacher](http://www.christophlabacher.com) within two weeks as part of a workshop by [Prof. Dr. Franklin Hernández-Castro](http://skizata.com) in spring 2014 at [Hochschule für Gestaltung Schwäbisch Gmünd](http://hfg-gmuend.de/).
+SWARM is a motion-controlled mini-game. It was created by [Nikolas Klein](http://nikolasklein.de), [Miguel Pawlowski](http://miguelpawlowski.de), [Florian Ludwig](http://www.florian-ludwig.de) and [Christoph Labacher](http://www.christophlabacher.com) within two weeks as part of a workshop by [Prof. Dr. Franklin Hernández-Castro](http://skizata.com) in spring 2014 at [Hochschule für Gestaltung Schwäbisch Gmünd](http://hfg-gmuend.de/).
 
 
 [![](/Readme/playing_1.png)](https://vimeo.com/christophlabacher/swarm)
@@ -51,13 +51,15 @@ The JavaScript version was created after the Processing version was finished to 
 	- [x] Make Firefly bounce of (and kill it eventually)
 	- [x] Cleanup SVGs and load them externally (not directly from index.html)
 - [ ] Game mechanism
+	- [ ] Implement loading screen
 	- [ ] Implement start screen, pause screen and reload after finish
 	- [ ] Restart when no Fireflies are left
+	- [ ] Implement tutorial
 - [ ] Performance optimisation
+	- [x] Implement loading algorythm
+	- [ ] Make sounds play synchronized (http://www.html5rocks.com/en/tutorials/audio/scheduling/)
 	- [ ] Compress images
 	- [ ] Compress sounds
-	- [ ] Implement loading algorythm (and screen)
-	- [ ] Make sounds play synchronized 
 	- [ ] Optimize collision
 - [ ] Cleanup
 	- [ ] Check seamless looping of images

@@ -18,14 +18,12 @@ function SoundSpot(i_, p_)	{
 	this.activated = false;
 	this.timemout = 40;
 
-	soundspotblur = new Image();
-	soundspotblur.src = 'imgs/sprites/soundspot_blur.png';
-	soundspotrotate = new Image();
-	soundspotrotate.src = 'imgs/sprites/soundspot_rotate.png';
+	soundspotblur = sprites[5];
+	soundspotrotate = sprites[6];
+	
 	this.rotate = random(0, 360);
 
-	this.sound = new Audio();
-	this.sound.src = 'sounds/loops_corridor/loop' + this.id + '.mp3';
+	this.sound = sounds[this.id - 1];
 	this.sound.loop = true;
 	this.sound.play();
 	this.sound.volume = 0;

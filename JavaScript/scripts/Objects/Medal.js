@@ -7,7 +7,7 @@ function Medal(i_)	{
 	this.position = new Vector(canvas.width/2 - 600 + this.id * 300, canvas.height/2-50);
 	this.opacity = 0.3;
 	this.activated = false;
-	this.countdown = this.id * 50;
+	this.countdown = this.id * 30;
 
 	// Setup vignette canvas
 	endCanvas = document.getElementById('endCanvas');
@@ -16,8 +16,7 @@ function Medal(i_)	{
 	endCanvas.height = 800;
 	
 	// Load static vignette
-	this.medalblur = new Image();
-	this.medalblur.src = 'imgs/sprites/medal_blur.png';
+	this.medalblur = sprites[4];
 }
 
 // Called in endScreen() when the medal is activated

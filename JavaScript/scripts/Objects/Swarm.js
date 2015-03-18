@@ -6,8 +6,7 @@ function Swarm(c_)	{
 	this.fireflies = []
 	var fireflyCount = c_ || 100;
 
-	fireflyglow = new Image();
-	fireflyglow.src = 'imgs/sprites/firefly_glow.png';
+	fireflyglow = sprites[0];
 
 	swarmfocus = false;
 	frontmostX = 0;

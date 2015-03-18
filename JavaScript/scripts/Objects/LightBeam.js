@@ -7,8 +7,7 @@ function LightBeam(i_, p_)	{
 	this.position = p_;
 
 	// Load lightbeam
-	this.lightbeam = new Image();
-	this.lightbeam.src = 'imgs/sprites/light_beam_' + this.id + '.png';
+	this.lightbeam = sprites[this.id];
 
 	this.dust = [];
 	for (var i = 0; i < 60; i++)	{
