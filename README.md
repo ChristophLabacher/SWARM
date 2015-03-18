@@ -57,9 +57,9 @@ The JavaScript version was created after the Processing version was finished to 
 	- [ ] Implement tutorial
 - [ ] Performance optimisation
 	- [x] Implement loading algorythm
-	- [ ] Make sounds play synchronized (http://www.html5rocks.com/en/tutorials/audio/scheduling/)
+	- [ ] Make sounds play synchronized
 	- [ ] Compress images
-	- [ ] Compress sounds
+	- [x] Compress sounds
 	- [ ] Optimize collision
 - [ ] Cleanup
 	- [ ] Check seamless looping of images
