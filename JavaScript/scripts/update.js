@@ -1,8 +1,5 @@
 // Update all elements
 function update()	{
-	if(!started)	{
-		
-	}
 
 	// Move the swarm => ever firefly
 	swarm.update();

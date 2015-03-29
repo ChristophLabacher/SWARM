@@ -53,11 +53,7 @@ body 	{
 
 	#screens	{
 		@include display;
-
-		.screen	{
-			//@include display;
-		}
-
+		
 		#pauseScreen	{
 			@include display;
 
@@ -68,7 +64,6 @@ body 	{
 
 		#pauseScreen.active	{
 			opacity: 1;
-			transition: opacity 3s ease-in;
 		}
 
 		#endScreen	{
@@ -81,7 +76,18 @@ body 	{
 
 		#endScreen.active	{
 			opacity: 1;
+		}
+		
+		#splashScreen	{
+			@include display;
+
+			background-color: black;
+			opacity: 0;
 			transition: opacity 3s ease-in;
+		}
+
+		#splashScreen.active	{
+			opacity: 1;
 		}
 
 		#blackoutScreen	{
@@ -94,8 +100,6 @@ body 	{
 
 		#blackoutScreen.active	{
 			opacity: 1;
-			transition: opacity 1s ease-in;
-
 		}		
 	}
 
@@ -105,14 +109,6 @@ body 	{
 		#overlayCanvas	{
 			@include display;
 			cursor: none;
-		}
-		
-		#testCanvas	{
-			@include display;
-		}
-				
-		#svgCanvas	{
-			@include display;
 		}
 	}
 }

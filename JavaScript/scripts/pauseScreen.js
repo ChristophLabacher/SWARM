@@ -1,18 +1,26 @@
 ////////////////////////////////////////////////////////////////////
-////	END OF THE LEVEL
+////	PAUSE
 ////////////////////////////////////////////////////////////////////
 
-// At the end of the level make the swam and the world slow down and stop
+// During the pause show and animate the icons
 function pauseScreen()	{
-
-	pause = false;
 
 	if(pause)	{
 		worldtick = false;
-		swarmtick = false;
+		swarmtick = true;
 
-		setClass('pauseScreen', 'active');
 		pauseIcons.update();
 		pauseIcons.draw();
+		
+		if (wasPause == false)	{
+			setClass('pauseScreen', 'active');
+		}
+		
+		wasPause = true;
 	};
+	
+	if (!pause && wasPause)	{
+		deleteClasses('pauseScreen', 'active');
+		wasPause = false;
+	}
 }

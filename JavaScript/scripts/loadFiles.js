@@ -41,32 +41,32 @@ function loadFiles()	{
 	soundCount = soundURL.length;
 	
 	fileCount = spriteCount + levelCount + levelSVGCount + soundCount;
-	
+	fileStepCount = fileCount;
 	
 	// Load sprites
 	for(var i = 0; i < spriteCount; i++) {
-	    /// create a new image element
-	    var img = new Image();
+		 /// create a new image element
+		 var img = new Image();
 	
-	    /// element is valid so we can push that to stack
-	    sprites.push(img);
+		 /// element is valid so we can push that to stack
+		 sprites.push(img);
 	
-	    /// set handler and url
-	    img.onload = onloadHandler;
-	    img.src = spriteURL[i];
+		 /// set handler and url
+		 img.onload = onloadHandler;
+		 img.src = spriteURL[i];
 	}
 	
 	// Load level
 	for(var i = 0; i < levelCount; i++) {
-	    /// create a new image element
-	    var img = new Image();
+		 /// create a new image element
+		 var img = new Image();
 	
-	    /// element is valid so we can push that to stack
-	    level.push(img);
+		 /// element is valid so we can push that to stack
+		 level.push(img);
 	
-	    /// set handler and url
-	    img.onload = onloadHandler;
-	    img.src = levelURL[i];
+		 /// set handler and url
+		 img.onload = onloadHandler;
+		 img.src = levelURL[i];
 	}
 	
 	// Load levelSVG
@@ -83,21 +83,19 @@ function loadFiles()	{
 	
 	// Load sounds
 	for(var i = 0; i < soundCount; i++) {
-	    /// create a new image element
-	    var audio = new Audio();
+		 /// create a new image element
+		 var audio = new Audio();
 	
-	    /// element is valid so we can push that to stack
-	    sounds.push(audio);
+		 /// element is valid so we can push that to stack
+		 sounds.push(audio);
 	
-	    /// set handler and url
-	    audio.autoPlay = false;
-	    audio.oncanplaythrough = onloadHandler;
-	    audio.src = soundURL[i];
+		 /// set handler and url
+		 audio.autoPlay = false;
+		 audio.oncanplaythrough = onloadHandler;
+		 audio.src = soundURL[i];
 	}
 }
 
 function onloadHandler() {
-    fileCount--;
-    console.log(fileCount);
-    if (fileCount === 0) filesLoaded();
+	fileCount--;
 }

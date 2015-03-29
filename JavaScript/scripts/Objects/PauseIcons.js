@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////
-////	MEDAL
+////	PAUSEICONS
 ////////////////////////////////////////////////////////////////////
 
 function PauseIcons()	{
@@ -32,15 +32,14 @@ function PauseIcons()	{
 
 // Update the icons
 PauseIcons.prototype.update = function ()	{
-	this.leftactiveopacity = map(Math.sin(this.opacitycount), -1, 1, 01, 2);
+	this.leftactiveopacity = map(Math.sin(this.opacitycount), -1, 1, 0, 1);
 	this.leftinactiveopacity = map(Math.sin(this.opacitycount + Math.PI), -1, 1, 0, 1);
 	this.opacitycount += 0.1
 
 	// Make the icons jiggle;
 	this.rightpositionY += Math.sin(this.movecount)*4;
-	console.log(Math.sin(this.movecount)*5);
-	this.movecount += 0.05;
 
+	this.movecount += 0.05;
 }
 
 // Draw the Icons
@@ -55,5 +54,5 @@ PauseIcons.prototype.draw = function ()	{
 
 	pauseCtx.globalAlpha = 0.8;
 	pauseCtx.drawImage(this.right, canvas.width/2 + 300 - 84, this.rightpositionY);
-	pauseCtx.globalAlpha = 1;s
+	pauseCtx.globalAlpha = 1;
 }

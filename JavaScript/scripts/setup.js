@@ -45,6 +45,8 @@ function setup()	{
 	soundspots[4] = new SoundSpot(5, new Vector(10150, 625));
 	soundspots[5] = new SoundSpot(6, new Vector(12320, 155));
 
+	pause = false;
+	wasPause = false;
 	pauseIcons = new PauseIcons();
 
 	// Initiate mouse tracking
