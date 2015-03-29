@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////
-////	SETUP OF THE LEVEL
+////	RESET
 ////////////////////////////////////////////////////////////////////
 
-// Create all elements
+// Removing all traces of the last run
 function reset()	{
 
 	delete swarm.fireflies;
@@ -34,5 +34,5 @@ function reset()	{
 	// Create new sound effects
 	delete soundEffects;
 
-	deleteClasses('endScreen');
+	$("#endScreen").removeClass("active");
 }

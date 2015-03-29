@@ -62,7 +62,7 @@ function flickerReset()	{
 
 // Map a number
 function map(value, low1, high1, low2, high2) {
-    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+	return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
 
 // Constrain a number
@@ -91,37 +91,23 @@ function getMousePosition()	{
 	var mie = (navigator.appName == "Microsoft Internet Explorer") ? true : false;
 	
 	if (!mie) {
-	     document.captureEvents(Event.MOUSEMOVE);
-	     document.captureEvents(Event.MOUSEDOWN);
+		  document.captureEvents(Event.MOUSEMOVE);
+		  document.captureEvents(Event.MOUSEDOWN);
 	}
 	
 	document.onmousemove = function (e) {mousePos(e);};
 	
 	function mousePos (e) {
-	    if (!mie) {
-	        mouseX = e.pageX; 
-	        mouseY = e.pageY;
-	    }
-	    else {
-	        mouseX = event.clientX + document.body.scrollLeft;
-	        mouseY = event.clientY + document.body.scrollTop;
-	    }
+		 if (!mie) {
+			 mouseX = e.pageX; 
+			 mouseY = e.pageY;
+		 }
+		 else {
+			 mouseX = event.clientX + document.body.scrollLeft;
+			 mouseY = event.clientY + document.body.scrollTop;
+		 }
 	
-	    return true;
+		 return true;
 	}
 
-}
-
-//	DOM
-////////////////////////////////////////////////////////////////////
-function addClass(id, klasse)	{
-	document.getElementById(id).className += ' ' + klasse;
-}
-
-function deleteClasses(id)	{
-	document.getElementById(id).className = '';
-}
-
-function setClass(id, klasse)	{
-	document.getElementById(id).className = klasse;
 }

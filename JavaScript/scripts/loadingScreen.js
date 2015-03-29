@@ -14,7 +14,7 @@ function loadingScreen()	{
 		innerLoadingRadius += 0.5;
 	} else if (fileCount === 0)	{
 		filesLoaded();
-		deleteClasses('splashScreen');
+		$("#splashScreen").removeClass("active");
 	}
 	
 	innerLoadingRadius += random(-.4, .4);

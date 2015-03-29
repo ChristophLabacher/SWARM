@@ -20,7 +20,7 @@ function endScreen()	{
 
 	// Fade in the end screen
 	if(gameposition > 13650 && gameposition < 13657)	{
-		addClass('endScreen', 'active')
+		$("#endScreen").addClass("active");
 	}
 
 	// Activate the won medals
@@ -36,7 +36,7 @@ function endScreen()	{
 	};
 
 	if(endofgameCounter == 300)	{
-		addClass('blackoutScreen', 'active');
+		$("#blackoutScreen").addClass("active");
 	};
 
 	if(endofgameCounter > 200 && endofgameCounter < 400)	{

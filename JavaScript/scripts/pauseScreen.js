@@ -13,14 +13,14 @@ function pauseScreen()	{
 		pauseIcons.draw();
 		
 		if (wasPause == false)	{
-			setClass('pauseScreen', 'active');
+			$("#pauseScreen").addClass("active")
 		}
 		
 		wasPause = true;
 	};
 	
 	if (!pause && wasPause)	{
-		deleteClasses('pauseScreen', 'active');
+		$("#pauseScreen").removeClass("active");
 		wasPause = false;
 	}
 }
