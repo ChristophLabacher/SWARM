@@ -19,27 +19,31 @@ var pauseCtx;
 var endCtx;
 
 // Initiate fullscreen
-var wrapper = document.getElementById("wrapper");
-  
 function toggleFullScreen() {
-  if (!document.mozFullScreen && !document.webkitFullScreen) {
-    if (wrapper.mozRequestFullScreen) {
-      wrapper.mozRequestFullScreen();
-    } else {
-      wrapper.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-    }
-  } else {
-    if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else {
-      document.webkitCancelFullScreen();
-    }
-  }
+	if (
+		 document.fullscreenEnabled || 
+		 document.webkitFullscreenEnabled || 
+		 document.mozFullScreenEnabled ||
+		 document.msFullscreenEnabled
+	)	{
+	
+		var i = document.getElementById("wrapper");
+	 
+		if (i.requestFullscreen) {
+			 i.requestFullscreen();
+		} else if (i.webkitRequestFullscreen) {
+			 i.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+		} else if (i.mozRequestFullScreen) {
+			 i.mozRequestFullScreen();
+		} else if (i.msRequestFullscreen) {
+			 i.msRequestFullscreen();
+		}
+	}
 }
 
 document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
-    toggleFullScreen();
+	toggleFullScreen();
   }
 }, false);
 
