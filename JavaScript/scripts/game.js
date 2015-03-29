@@ -64,6 +64,7 @@ function loop()	{
 		draw();
 		pauseScreen();
 		endScreen();	
+		gameOver();
 	} else {
 		loadingScreen();
 	}

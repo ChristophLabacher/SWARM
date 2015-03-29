@@ -61,6 +61,9 @@ function setup()	{
 	gameposition = 0;
 	endofgameCounter = 0;
 	endofgame = false;
+	
+	gameOverCounter = 0;
+	isGameOver = false;
 
 	swarmtick = true;
 	worldtick = true;

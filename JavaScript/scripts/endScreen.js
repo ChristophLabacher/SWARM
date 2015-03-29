@@ -5,8 +5,6 @@
 // At the end of the level make the swam and the world slow down and stop
 function endScreen()	{
 
-	endofgame = false;
-
 	// Make the swarm move out of the viewport, fade out target
 	if(gameposition > 12800)	{
 		swarmslowdown();
@@ -35,7 +33,7 @@ function endScreen()	{
 		endofgameCounter++;
 	};
 
-	if(endofgameCounter == 300)	{
+	if(endofgameCounter >= 300)	{
 		$("#blackoutScreen").addClass("active");
 	};
 
@@ -43,6 +41,16 @@ function endScreen()	{
 		for(var i = 0; i < soundspots.length; i++)	{
 			soundspots[i].sound.volume *= 0.95;
 		}		
+	}
+	
+	if(endofgameCounter >= 400)	{
+		reset();
+		setup();
+		
+		setTimeout(function(){
+			$("#endScreen").removeClass("active");
+			$("#blackoutScreen").removeClass("active");
+		}, 300)
 	}
 }
 
