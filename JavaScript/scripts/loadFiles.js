@@ -29,19 +29,20 @@ function loadFiles()	{
 	
 	sounds = [];
 	soundURL = [
+		'sounds/fx/ambient.mp3',
+		'sounds/fx/swarm.mp3',
 		'sounds/loops/loop1.mp3',
 		'sounds/loops/loop2.mp3',
 		'sounds/loops/loop3.mp3',
 		'sounds/loops/loop4.mp3',
 		'sounds/loops/loop5.mp3',
-		'sounds/loops/loop6.mp3',
-		'sounds/fx/ambient.mp3',
-		'sounds/fx/swarm.mp3'
+		'sounds/loops/loop6.mp3'
 	];
 	soundCount = soundURL.length;
 	
 	fileCount = spriteCount + levelCount + levelSVGCount + soundCount;
 	fileStepCount = fileCount;
+	imgCount = fileCount - soundCount;
 	
 	// Load sprites
 	for(var i = 0; i < spriteCount; i++) {
@@ -52,8 +53,8 @@ function loadFiles()	{
 		 sprites.push(img);
 	
 		 /// set handler and url
-		 img.onload = onloadHandler;
 		 img.src = spriteURL[i];
+		 img.onload = onloadHandler;
 	}
 	
 	// Load level
@@ -65,14 +66,14 @@ function loadFiles()	{
 		 level.push(img);
 	
 		 /// set handler and url
-		 img.onload = onloadHandler;
 		 img.src = levelURL[i];
+		 img.onload = onloadHandler;
 	}
 	
 	// Load levelSVG
 	$.ajax({
 		type: "GET",
-		async: false,
+		async: true,
 		url: levelSVGURL,
 		dataType: "xml",
 		success: function(xml){
@@ -81,21 +82,26 @@ function loadFiles()	{
 		}
 	});
 	
-	// Load sounds
-	for(var i = 0; i < soundCount; i++) {
-		 /// create a new image element
-		 var audio = new Audio();
-	
-		 /// element is valid so we can push that to stack
-		 sounds.push(audio);
-	
-		 /// set handler and url
-		 audio.autoPlay = false;
-		 audio.oncanplaythrough = onloadHandler;
-		 audio.src = soundURL[i];
-	}
 }
 
-function onloadHandler() {
+function onloadHandler(_scr) {
 	fileCount--;
+	console.log(fileCount);
+	
+	if (fileCount == 0)	{
+		filesLoaded();
+	} else if (fileCount == imgCount)	{
+		for(var i = 0; i < soundCount; i++) {
+			 /// create a new image element
+			 var audio = new Audio();
+		
+			 /// element is valid so we can push that to stack
+			 sounds.push(audio);
+		
+			 /// set handler and url
+			 audio.autoPlay = false;
+			 audio.src = soundURL[i];	
+			 audio.oncanplaythrough = onloadHandler;
+		}	
+	}
 }

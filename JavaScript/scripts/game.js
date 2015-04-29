@@ -66,7 +66,7 @@ function loop()	{
 		endScreen();	
 		gameOver();
 	} else {
-		loadingScreen();
+		//loadingScreen();
 	}
 	
 	queue();

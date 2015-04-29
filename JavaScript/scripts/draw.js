@@ -23,7 +23,7 @@ function draw()	{
 	target.draw();
 
 	// Draw foreground
-	paralax.drawForeground();
+	//paralax.drawForeground();
 
 	// Draw blur
 	paralax.drawBlur();
@@ -36,6 +36,6 @@ function draw()	{
 		medals[i].draw();
 	}
 	// Draw vignette
-	vignette.vignetteStatic();
+	//vignette.vignetteStatic();
 	vignette.vignetteDynamic();
 }
