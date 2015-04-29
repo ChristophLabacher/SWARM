@@ -8,6 +8,8 @@ SWARM is a motion-controlled mini-game. It was created by [Nikolas Klein](http:/
 
 There are two versions available: Processing and HTML5/JavaScript.
 
+> JavaScript version is a work in progress! It generally works but might not be completly functioning. For progress and to-do see issue-tracking.
+
 ## Gameplay
 
 A swarm of fireflies is flying through a cave. The user can alter its altitude by moving his right hand up or down. He has to, since the fireflies can get caught on the cave’s walls. Sometimes one has to navigate through narrow spaces – clenching a fist with your right hand focuses the swarm and makes it easier controllable for a short time. After a couple of seconds of being focused the fireflies are being spread apart.
@@ -41,37 +43,6 @@ To make the game run in Processing at an acceptable framerate we used Multi-Thre
 ### JavaScript
 
 The JavaScript version was created after the Processing version was finished to tackle a lack of performance. The game was completely rewritten and partly restructured. The collision is this time using [Paper.js](http://paperjs.org) as a base library. **This version is still in development and does not support Leap Motion tracking yet!**
-
-## To-Do
-
-- [x] Collision detection
-	- [x] Load points in array
-	- [x] Shift array depending on game position
-	- [x] Get points with x close to Firefly and get dist (Current position and position in the next frame)
-	- [x] Make Firefly bounce of (and kill it eventually)
-	- [x] Cleanup SVGs and load them externally (not directly from index.html)
-- [ ] Game mechanism
-	- [ ] Implement loading screen
-	- [ ] Implement start screen, pause screen and reload after finish
-	- [ ] Restart when no Fireflies are left
-	- [ ] Implement tutorial
-- [ ] Performance optimisation
-	- [x] Implement loading algorythm
-	- [ ] Make sounds play synchronized
-	- [ ] Compress images
-	- [x] Compress sounds
-	- [ ] Optimize collision
-- [ ] Cleanup
-	- [ ] Check seamless looping of images
-	- [ ] Check comments
-	- [ ] Replace DOM management with jQuery pendant (addClass etc.)
-	- [ ] Review FullScreen code
-- [ ] Leap motion
-	- [ ] Import library
-	- [ ] Implement hand-tracking (and pause screen)
-	- [ ] Implement fist-gesture
-	- [ ] Make the swam follow & start screen understand gestures (replace mouse-events in setup.js)
-	- [ ] Check for Leap Motion and switch to mouse
 	
 ## Ideas
 
